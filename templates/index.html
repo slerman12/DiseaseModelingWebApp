@@ -86,24 +86,30 @@
 <form id="regForm" action="/action_page.php">
     <!-- One "tab" for each step in the form: -->
     <div class="tab">
-        <h3>A future MDS-UPDRS III score will be predicted based on current patient data. Please begin by pressing next and filling in the necessary patient information.</h3>
+        <h3>A future MDS-UPDRS III score will be predicted based on current patient data. Please begin by pressing next and filling in the relevant patient information.</h3>
     </div>
-    <div class="tab">Name:
-        <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
-        <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
+    <div class="tab">Patient bio:
+        <p><input placeholder="Current age" oninput="this.className = ''" name="AGE"></p>
+        <p><input placeholder="Time since first PD symptom" oninput="this.className = ''" name="TIME_SINCE_FIRST_SYMPTOM"></p>
+        <p><input placeholder="Time since PD diagnosis" oninput="this.className = ''" name="TIME_SINCE_DIAGNOSIS"></p>
+        <p><input placeholder="Number of years of education" oninput="this.className = ''" name="Number of years of education"></p>
     </div>
-    <div class="tab">Contact Info:
-        <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-        <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+    <div class="tab">Blood pressure:
+        <p><input placeholder="Standing diastolic BP" oninput="this.className = ''" name="DIASTND"></p>
+        <p><input placeholder="Supine diastolic BP" oninput="this.className = ''" name="DIASUP"></p>
+        <p><input placeholder="Standing systolic BP" oninput="this.className = ''" name="SYSSTND"></p>
+        <p><input placeholder="Supine systolic BP" oninput="this.className = ''" name="SYSSUP"></p>
     </div>
-    <div class="tab">Birthday:
-        <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-        <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-        <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+    <div class="tab">Heart rate:
+        <p><input placeholder="Standing heart rate" oninput="this.className = ''" name="HRSTND"></p>
+        <p><input placeholder="Supine heart rate" oninput="this.className = ''" name="HRSUP"></p>
     </div>
-    <div class="tab">Login Info:
-        <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-        <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+    <div class="tab">Current MDS-UPDRS scores:
+        <p><input placeholder="MDS-UPDRS part I" oninput="this.className = ''" name="UPDRS_I"></p>
+        <p><input placeholder="MDS-UPDRS part II" oninput="this.className = ''" name="UPDRS_II"></p>
+        <p><input placeholder="MDS-UPDRS parts II and III" oninput="this.className = ''" name="UPDRS_II_AND_III"></p>
+        <p><input placeholder="MDS-UPDRS part III" oninput="this.className = ''" name="UPDRS_III"></p>
+        <p><input placeholder="Total MDS-UPDRS" oninput="this.className = ''" name="TOTAL"></p>
     </div>
     <div style="overflow:auto;">
         <div style="float:right;">
