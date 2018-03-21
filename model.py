@@ -1,4 +1,4 @@
-from flask import Flask, flash, redirect, render_template, request, session, abort
+from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
 import pickle
 from sklearn.ensemble import RandomForestRegressor
 
@@ -10,22 +10,32 @@ def index():
     return render_template(
         'index.html')
 
-
-if __name__ == "__main__":
-    model_name = 'saved_models/model_future_severity_untreated_off_SCORE_FUTURE_UPDRS_III_0.001_ranking_PD_GENPD_' \
-                 'REGPD_0_to_0.33_timeframe'
-
+@app.route('/model', methods = ['POST'])
+def model():
     # X = [["TIME_PASSED", "SYSSUP", "DIASTND",  "AGE",
     #       "DIASUP", "UPDRS_I", "TIME_SINCE_DIAGNOSIS", "HRSUP",
     #       "TOTAL", "UPDRS_III", "EDUCYRS", "SYSSTND",
     #       "UPDRS_II", "HRSTND", "UPDRS_II_AND_III", "TIME_SINCE_FIRST_SYMPTOM"]]
 
-    X = [[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]]
+    updrs_III = request.form['UPDRS_III']
 
-    loaded_model = pickle.load(open(model_name, 'rb'))
+    X = [[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]]
 
     pred = loaded_model.predict(X)
 
-    print(pred)
+    future_score = pred[0]
+
+    return redirect(url_for('predict', future_score=future_score))
+
+@app.route("/prediction")
+def predict():
+    return render_template("prediction.html", future_score=request.args.get('future_score'))
+
+
+if __name__ == "__main__":
+    model_name = 'saved_models/model_future_severity_untreated_off_SCORE_FUTURE_UPDRS_III_0.001_ranking_PD_GENPD_' \
+                 'REGPD_0_to_0.33_timeframe'
+
+    loaded_model = pickle.load(open(model_name, 'rb'))
 
     app.run(host='0.0.0.0', port=5001)

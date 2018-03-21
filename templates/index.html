@@ -83,10 +83,10 @@
 </style>
 <body>
 
-<form id="regForm" action="/action_page.php">
+<form id="regForm" action="/model" method="post">
     <!-- One "tab" for each step in the form: -->
     <div class="tab">
-        <h3>A future MDS-UPDRS III score will be predicted based on current patient data. Please begin by pressing next and filling in the relevant patient information.</h3>
+        <h3>A future MDS-UPDRS Part III score will be predicted based on current patient data. Please begin by pressing next and filling in the relevant patient information.</h3>
     </div>
     <div class="tab">Patient bio:
         <p><input placeholder="Current age" oninput="this.className = ''" name="AGE"></p>
@@ -123,10 +123,12 @@
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
+        <span class="step"></span>
     </div>
 </form>
 
 <script>
+
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the crurrent tab
 
@@ -142,7 +144,9 @@
         }
         if (n == (x.length - 1)) {
             document.getElementById("nextBtn").innerHTML = "Submit";
-        } else {
+        }
+        else
+        {
             document.getElementById("nextBtn").innerHTML = "Next";
         }
         //... and run a function that will display the correct step indicator:
@@ -161,6 +165,7 @@
         // if you have reached the end of the form...
         if (currentTab >= x.length) {
             // ... the form gets submitted:
+
             document.getElementById("regForm").submit();
             return false;
         }
@@ -180,7 +185,7 @@
                 // add an "invalid" class to the field:
                 y[i].className += " invalid";
                 // and set the current valid status to false
-                valid = false;
+//                valid = false;
             }
         }
         // If the valid status is true, mark the step as finished and valid:
