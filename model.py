@@ -12,14 +12,12 @@ def index():
 
 @app.route('/model', methods = ['POST'])
 def model():
-    # X = [["TIME_PASSED", "SYSSUP", "DIASTND",  "AGE",
-    #       "DIASUP", "UPDRS_I", "TIME_SINCE_DIAGNOSIS", "HRSUP",
-    #       "TOTAL", "UPDRS_III", "EDUCYRS", "SYSSTND",
-    #       "UPDRS_II", "HRSTND", "UPDRS_II_AND_III", "TIME_SINCE_FIRST_SYMPTOM"]]
+    features = ["TIME_PASSED", "SYSSUP", "DIASTND",  "AGE",
+          "DIASUP", "UPDRS_I", "TIME_SINCE_DIAGNOSIS", "HRSUP",
+          "TOTAL", "UPDRS_III", "EDUCYRS", "SYSSTND",
+          "UPDRS_II", "HRSTND", "UPDRS_II_AND_III", "TIME_SINCE_FIRST_SYMPTOM"]
 
-    updrs_III = request.form['UPDRS_III']
-
-    X = [[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]]
+    X = [[request.form[feature] for feature in features]]
 
     pred = loaded_model.predict(X)
 

@@ -92,7 +92,7 @@
         <p><input placeholder="Current age" oninput="this.className = ''" name="AGE"></p>
         <p><input placeholder="Number of years since first PD symptom" oninput="this.className = ''" name="TIME_SINCE_FIRST_SYMPTOM"></p>
         <p><input placeholder="Number of years since PD diagnosis" oninput="this.className = ''" name="TIME_SINCE_DIAGNOSIS"></p>
-        <p><input placeholder="Number of years of education" oninput="this.className = ''" name="Number of years of education"></p>
+        <p><input placeholder="Number of years of education" oninput="this.className = ''" name="EDUCYRS"></p>
     </div>
     <div class="tab">Blood pressure:
         <p><input placeholder="Standing diastolic BP" oninput="this.className = ''" name="DIASTND"></p>
@@ -103,6 +103,7 @@
     <div class="tab">Heart rate:
         <p><input placeholder="Standing heart rate" oninput="this.className = ''" name="HRSTND"></p>
         <p><input placeholder="Supine heart rate" oninput="this.className = ''" name="HRSUP"></p>
+        <input type="hidden" name="TIME_PASSED" value="4">
     </div>
     <div class="tab">Current MDS-UPDRS scores:
         <p><input placeholder="MDS-UPDRS part I" oninput="this.className = ''" name="UPDRS_I"></p>
@@ -185,7 +186,7 @@
                 // add an "invalid" class to the field:
                 y[i].className += " invalid";
                 // and set the current valid status to false
-//                valid = false;
+                valid = false;
             }
         }
         // If the valid status is true, mark the step as finished and valid:
