@@ -12,12 +12,19 @@ def index():
 
 @app.route('/model', methods = ['POST'])
 def model():
-    features = ["TIME_PASSED", "SYSSUP", "DIASTND",  "AGE",
-          "DIASUP", "UPDRS_I", "TIME_SINCE_DIAGNOSIS", "HRSUP",
-          "TOTAL", "UPDRS_III", "EDUCYRS", "SYSSTND",
-          "UPDRS_II", "HRSTND", "UPDRS_II_AND_III", "TIME_SINCE_FIRST_SYMPTOM"]
+    # features = ["TIME_PASSED", "SYSSUP", "DIASTND",  "AGE",
+    #       "DIASUP", "UPDRS_I", "TIME_SINCE_DIAGNOSIS", "HRSUP",
+    #       "TOTAL", "UPDRS_III", "EDUCYRS", "SYSSTND",
+    #       "UPDRS_II", "HRSTND", "UPDRS_II_AND_III", "TIME_SINCE_FIRST_SYMPTOM"]
 
-    X = [[request.form[feature] for feature in features]]
+    # X = [[request.form[feature] for feature in features]]
+
+    X = [[request.form["TIME_PASSED"], request.form["SYSSUP"], request.form["DIASTND"], request.form["AGE"],
+          request.form["DIASUP"], request.form["UPDRS_I"], request.form["TIME_SINCE_DIAGNOSIS"], request.form["HRSUP"],
+          request.form["UPDRS_I"] + request.form["UPDRS_II"] + request.form["UPDRS_III"],
+          request.form["UPDRS_III"], request.form["EDUCYRS"], request.form["SYSSTND"],
+          request.form["UPDRS_II"], request.form["HRSTND"], request.form["UPDRS_II"] + request.form["UPDRS_III"],
+          request.form["TIME_SINCE_FIRST_SYMPTOM"]]]
 
     pred = loaded_model.predict(X)
 
