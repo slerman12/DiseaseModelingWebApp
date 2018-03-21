@@ -20,7 +20,7 @@ if __name__ == "__main__":
     #       "TOTAL", "UPDRS_III", "EDUCYRS", "SYSSTND",
     #       "UPDRS_II", "HRSTND", "UPDRS_II_AND_III", "TIME_SINCE_FIRST_SYMPTOM"]]
 
-    X = [[]]
+    X = [[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]]
 
     loaded_model = pickle.load(open(model_name, 'rb'))
 
