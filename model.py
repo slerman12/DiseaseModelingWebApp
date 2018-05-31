@@ -28,7 +28,7 @@ def model():
 
     pred = loaded_model.predict(X)
 
-    future_score = pred[0]
+    future_score = round(pred[0], 2)
 
     return redirect(url_for('predict', future_score=future_score))
 
