@@ -10,6 +10,11 @@ def index():
     return render_template(
         'index.html')
 
+@app.route("/launch")
+def index():
+    return render_template(
+        'RoP.html')
+
 @app.route('/model', methods = ['POST'])
 def model():
     # features = ["TIME_PASSED", "SYSSUP", "DIASTND",  "AGE",

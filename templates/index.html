@@ -1,210 +1,191 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<style>
-    * {
-        box-sizing: border-box;
-    }
+	<head>
+		<title>AutoPrognosis by Center for Human Experimental Therapeutics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
 
-    body {
-        background-color: #f1f1f1;
-    }
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="index.html">AutoPrognosis <span>by CHeT</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
 
-    #regForm {
-        background-color: #ffffff;
-        margin: 100px auto;
-        font-family: Raleway;
-        padding: 40px;
-        width: 70%;
-        min-width: 300px;
-    }
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">About</a></li>
+					<!--<li><a href="elements.html">Elements</a></li>-->
+				</ul>
+			</nav>
 
-    h1 {
-        text-align: center;
-    }
+		<!-- Banner -->
+			<section class="banner full">
+				<article>
+					<img src="images/home-mast.jpg" alt="" />
+					<div class="inner">
+						<header>
+							<p>Cutting edge machine learning technology for disease prognostication</p>
+                            <h2><a href="index.html">AutoPrognosis</a></h2>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/homeBanner_chet_1920x600.jpg" alt="" />
+					<div class="inner">
+						<header>
+							<p>By the <a href="https://www.urmc.rochester.edu/health-technology.aspx">University of Rochester &middot; Center for Health & Technology</a></p>
+                            <h2><a href="https://www.urmc.rochester.edu/health-technology.aspx">URMC CHeT</a></h2>
+						</header>
+					</div>
+				</article>
+				<!--<article>-->
+					<!--<img src="images/2014-11-10_Rush_Rhees_Library_campus_life_15100.jpg"  alt="" />-->
+					<!--<div class="inner">-->
+						<!--<header>-->
+							<!--<p><a href="">University of Rochester Medical Center</a></p>-->
+                            <!--<h2></h2>-->
+						<!--</header>-->
+					<!--</div>-->
+				<!--</article>-->
+			</section>
 
-    input {
-        padding: 10px;
-        width: 100%;
-        font-size: 17px;
-        font-family: Raleway;
-        border: 1px solid #aaaaaa;
-    }
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="grid-style">
 
-    /* Mark input boxes that gets an error on validation: */
-    input.invalid {
-        background-color: #ffdddd;
-    }
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/SCM%20Consulting.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>classifying as "slow"</p>
+										<h2>Rate of Progression</h2>
+									</header>
+									<p> In this model, current patient info is used to estimate if a patient is likely to progress slowly or not with respect to some outcome measure, such as MDS-UPDRS Part III in the progression of Parkinson's disease.</p>
+									<footer class="align-center">
+										<a href="/launch" class="button alt">Launch</a>
+									</footer>
+								</div>
+							</div>
+						</div>
 
-    /* Hide all steps by default: */
-    .tab {
-        display: none;
-    }
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/SCM%20Consulting.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>predicting the future value of a selected outcome measure</p>
+										<h2>Future Severity</h2>
+									</header>
+									<p> In this model, current patient info is used to make a prediction about the future value of a selected outcome measure, such as the future value of a patient's MDS-UPDRS Part III score in the progression of Parkinson's disease.</p>
+									<footer class="align-center">
+										<a href="/launch" class="button alt">Launch</a>
+									</footer>
+								</div>
+							</div>
+						</div>
 
-    button {
-        background-color: #4CAF50;
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        font-size: 17px;
-        font-family: Raleway;
-        cursor: pointer;
-    }
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/SCM%20Consulting.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>when a selected symptom might present itself</p>
+										<h2>Time Until Symptom Onset</h2>
+									</header>
+									<p> In this model, current patient info is used to estimate how soon a selected symptom might present itself in a patient. Such a symptom could be, for example, the onset of tremors in Parkinson's disease. </p>
+									<footer class="align-center">
+										<a href="/launch" class="button alt">Launch</a>
+									</footer>
+								</div>
+							</div>
+						</div>
 
-    button:hover {
-        opacity: 0.8;
-    }
+					</div>
+				</div>
+			</section>
 
-    #prevBtn {
-        background-color: #bbbbbb;
-    }
+		<!-- Two -->
+			<section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Extensive clinical data and the latest in artifical intelligence and data science</p>
+						<h2>Innovative Prognosis Technology & More To Come</h2>
+					</header>
+				</div>
+			</section>
 
-    /* Make circles that indicate the steps of the form: */
-    .step {
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbbbbb;
-        border: none;
-        border-radius: 50%;
-        display: inline-block;
-        opacity: 0.5;
-    }
+		<!-- Three -->
+			<section id="three" class="wrapper style2">
+				<div class="inner">
+					<header class="align-center">
+						<p class="special">Presented by University of Rochester's Center for Health and technology</p>
+						<h2>Our Collaborators</h2>
+					</header>
+					<div class="gallery">
+						<div>
+							<!--CHeT, MJFF, URMC, Hajim,-->
+							<div class="image fit">
+								<a href="https://www.urmc.rochester.edu/health-technology.aspx"><img src="images/homeBanner_chet_1920x600%202.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="https://www.rochester.edu"><img src="images/URblue.png" alt="" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="https://www.urmc.rochester.edu"><img src="images/dae4ebcc-9361-48d9-b836-07220cbd30b7-large16x9_urmc.JPG" alt="" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="https://www.michaeljfox.org"><img src="images/blog_placeholder_41.jpg" alt="" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    .step.active {
-        opacity: 1;
-    }
 
-    /* Mark the steps that are finished and valid: */
-    .step.finish {
-        background-color: #4CAF50;
-    }
-</style>
-<body>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="mailto:slerman@ur.rochester.edu?Subject=CHeT%20webpage%20mail" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						<li><a href="tel:585-290-2381" class="icon fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="https://www.facebook.com/UniversityofRochesterMedicalCenter/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; AutoPrognosis. All rights reserved.
+				</div>
+			</footer>
 
-<form id="regForm" action="/model" method="post">
-    <!-- One "tab" for each step in the form: -->
-    <div class="tab">
-        <h3>A future MDS-UPDRS Part III score will be predicted based on current patient data. Please begin by pressing next and filling in the relevant patient information.</h3>
-    </div>
-    <div class="tab">Patient bio:
-        <p><input placeholder="Current age" oninput="this.className = ''" type="number" name="AGE"></p>
-        <p><input placeholder="Number of years since first PD symptom" type="number" oninput="this.className = ''" name="TIME_SINCE_FIRST_SYMPTOM"></p>
-        <p><input placeholder="Number of years since PD diagnosis" type="number" oninput="this.className = ''" name="TIME_SINCE_DIAGNOSIS"></p>
-        <p><input placeholder="Number of years of education" type="number" oninput="this.className = ''" name="EDUCYRS"></p>
-    </div>
-    <div class="tab">Blood pressure:
-        <p><input placeholder="Standing systolic BP" type="number" oninput="this.className = ''" name="SYSSTND"></p>
-        <p><input placeholder="Standing diastolic BP" type="number" oninput="this.className = ''" name="DIASTND"></p>
-        <p><input placeholder="Supine systolic BP" type="number" oninput="this.className = ''" name="SYSSUP"></p>
-        <p><input placeholder="Supine diastolic BP" type="number" oninput="this.className = ''" name="DIASUP"></p>
-    </div>
-    <div class="tab">Heart rate:
-        <p><input placeholder="Standing heart rate" type="number" oninput="this.className = ''" name="HRSTND"></p>
-        <p><input placeholder="Supine heart rate" type="number" oninput="this.className = ''" name="HRSUP"></p>
-        <input type="hidden" name="TIME_PASSED" value="4">
-    </div>
-    <div class="tab">Current MDS-UPDRS scores without symptomatic PD medications:
-        <p><input placeholder="MDS-UPDRS part I" type="number" oninput="this.className = ''" name="UPDRS_I"></p>
-        <p><input placeholder="MDS-UPDRS part II" type="number" oninput="this.className = ''" name="UPDRS_II"></p>
-        <p><input placeholder="MDS-UPDRS part III" type="number" oninput="this.className = ''" name="UPDRS_III"></p>
-    </div>
-    <div style="overflow:auto;">
-        <div style="float:right;">
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-        </div>
-    </div>
-    <!-- Circles which indicates the steps of the form: -->
-    <div style="text-align:center;margin-top:40px;">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-    </div>
-</form>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-<script>
-
-    var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the crurrent tab
-
-    function showTab(n) {
-        // This function will display the specified tab of the form...
-        var x = document.getElementsByClassName("tab");
-        x[n].style.display = "block";
-        //... and fix the Previous/Next buttons:
-        if (n == 0) {
-            document.getElementById("prevBtn").style.display = "none";
-        } else {
-            document.getElementById("prevBtn").style.display = "inline";
-        }
-        if (n == (x.length - 1)) {
-            document.getElementById("nextBtn").innerHTML = "Submit";
-        }
-        else
-        {
-            document.getElementById("nextBtn").innerHTML = "Next";
-        }
-        //... and run a function that will display the correct step indicator:
-        fixStepIndicator(n)
-    }
-
-    function nextPrev(n) {
-        // This function will figure out which tab to display
-        var x = document.getElementsByClassName("tab");
-        // Exit the function if any field in the current tab is invalid:
-        if (n == 1 && !validateForm()) return false;
-        // Hide the current tab:
-        x[currentTab].style.display = "none";
-        // Increase or decrease the current tab by 1:
-        currentTab = currentTab + n;
-        // if you have reached the end of the form...
-        if (currentTab >= x.length) {
-            // ... the form gets submitted:
-
-            document.getElementById("regForm").submit();
-            return false;
-        }
-        // Otherwise, display the correct tab:
-        showTab(currentTab);
-    }
-
-    function validateForm() {
-        // This function deals with validation of the form fields
-        var x, y, i, valid = true;
-        x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByTagName("input");
-        // A loop that checks every input field in the current tab:
-        for (i = 0; i < y.length; i++) {
-            // If a field is empty...
-            if (y[i].value == "") {
-                // add an "invalid" class to the field:
-                y[i].className += " invalid";
-                // and set the current valid status to false
-                valid = false;
-            }
-        }
-        // If the valid status is true, mark the step as finished and valid:
-        if (valid) {
-            document.getElementsByClassName("step")[currentTab].className += " finish";
-        }
-        return valid; // return the valid status
-    }
-
-    function fixStepIndicator(n) {
-        // This function removes the "active" class of all steps...
-        var i, x = document.getElementsByClassName("step");
-        for (i = 0; i < x.length; i++) {
-            x[i].className = x[i].className.replace(" active", "");
-        }
-        //... and adds the "active" class on the current step:
-        x[n].className += " active";
-    }
-</script>
-
-</body>
+	</body>
 </html>
-
