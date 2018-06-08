@@ -2,6 +2,7 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}" />
 <style>
     * {
         box-sizing: border-box;
@@ -82,6 +83,21 @@
     }
 </style>
 <body>
+
+<!-- Header -->
+<header id="header">
+    <div class="logo"><a href="/">AutoPrognosis <span>by CHeT</span></a></div>
+    <a href="#menu">Menu</a>
+</header>
+
+<!-- Nav -->
+<nav id="menu">
+    <ul class="links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <!--<li><a href="elements.html">Elements</a></li>-->
+    </ul>
+</nav>
 
 <form id="regForm" action="/model" method="post">
     <!-- One "tab" for each step in the form: -->
