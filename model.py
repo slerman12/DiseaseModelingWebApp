@@ -11,7 +11,7 @@ def index():
         'index.html')
 
 @app.route("/launch")
-def index():
+def launch():
     return render_template(
         'RoP.html')
 
