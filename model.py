@@ -15,6 +15,11 @@ def launch():
     return render_template(
         'RoP.html')
 
+@app.route("/about")
+def about():
+    return render_template(
+        'generic.html')
+
 @app.route('/model', methods = ['POST'])
 def model():
     # features = ["TIME_PASSED", "SYSSUP", "DIASTND",  "AGE",

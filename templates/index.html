@@ -9,21 +9,21 @@
 		<title>AutoPrognosis by Center for Human Experimental Therapeutics</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}" />
 	</head>
 	<body>
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<div class="logo"><a href="index.html">AutoPrognosis <span>by CHeT</span></a></div>
+				<div class="logo"><a href="/index">AutoPrognosis <span>by CHeT</span></a></div>
 				<a href="#menu">Menu</a>
 			</header>
 
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">About</a></li>
+					<li><a href="/index">Home</a></li>
+					<li><a href="/about">About</a></li>
 					<!--<li><a href="elements.html">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -35,7 +35,7 @@
 					<div class="inner">
 						<header>
 							<p>Cutting edge machine learning technology for disease prognostication</p>
-                            <h2><a href="index.html">AutoPrognosis</a></h2>
+                            <h2><a href="/index">AutoPrognosis</a></h2>
 						</header>
 					</div>
 				</article>
