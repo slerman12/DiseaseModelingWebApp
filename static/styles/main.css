@@ -4250,11 +4250,12 @@
 			}
 
 			.banner > article p {
+				font-size: 10px;
 				margin-bottom: 1rem;
 			}
 
 			.banner > article h2 {
-				font-size: 4em;
+				font-size: 2em;
 			}
 
 		}
