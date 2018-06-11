@@ -3868,6 +3868,10 @@
 			font-size: 1em;
 		}
 
+		#header > a {
+			font-size: 1em;
+		}
+
 	}
 
 /* Menu */
